@@ -67,13 +67,14 @@
 (add-to-list 'default-frame-alist '(width . 150))
 
 ;;Start emacs fullscreen
-(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+;;(add-to-list 'initial-frame-alist '(fullscreen . maximized))
 ;;(add-to-list 'initial-frame-alist '(fullscreen . fullboth))
 
 ;;Add folders to project list
 (setq projectile-project-search-path '("~/dev/study/" "~/dev/test-apps/" ("~/dev/ciam/" . 1)))
 ;;Disable exit prompt
-(setq confirm-kill-emacs nil)
+;;(setq confirm-kill-emacs nil)
+
 (use-package rego-mode
   :ensure t
   :custom
@@ -82,3 +83,10 @@
 
 (setq org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆")
       org-superstar-item-bullet-alist '((?+ . ?➤) (?- . ?✦)))
+
+(after! lsp-rust
+  (setq lsp-rust-server 'rust-analyzer))
+
+(setq deft-directory "~/notes"
+      deft-extensions '("org", "txt")
+      deft-recursive t)
