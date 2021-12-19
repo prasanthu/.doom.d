@@ -20,13 +20,15 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 
-(setq doom-font (font-spec :family "IBM Plex Mono" :size 16)
-      doom-big-font (font-spec :family "Source Code Pro" :size 30))
+;;(setq doom-font (font-spec :family "IBM Plex Mono" :size 16)
+;;      doom-big-font (font-spec :family "Source Code Pro" :size 30))
 
-;;(setq doom-font (font-spec :family "Menlo" :size 12 :weight 'Regular)
-;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-
-;;(setq doom-font (font-spec :family "Fira Code" :size 12 :slant 'normal :weight 'normal))
+(setq doom-font (font-spec :family "Iosevka SS04" :size 18 :weight 'regular))
+(if (eq system-type 'darwin)
+    ;; mac specific settings
+    (setq doom-big-font (font-spec :family "SF Pro Text" :size 20))
+    ;;non mac
+    (setq doom-big-font (font-spec :family "Source Code Pro" :size 30)))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
