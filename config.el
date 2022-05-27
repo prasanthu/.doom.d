@@ -23,10 +23,10 @@
 ;;(setq doom-font (font-spec :family "IBM Plex Mono" :size 16)
 ;;      doom-big-font (font-spec :family "Source Code Pro" :size 30))
 
-(setq doom-font (font-spec :family "Iosevka SS04" :size 18 :weight 'light))
+(setq doom-font (font-spec :family "Comic Code Ligatures" :size 18 :weight 'light))
 (if (eq system-type 'darwin)
     ;; mac specific settings
-    (setq doom-big-font (font-spec :family "SF Pro Text" :size 20))
+    (setq doom-big-font (font-spec :family "Comic Code Ligatures" :size 22))
     ;;non mac
     (setq doom-big-font (font-spec :family "Source Code Pro" :size 30)))
 
